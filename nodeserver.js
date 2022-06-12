@@ -13,13 +13,14 @@ var users = [
 
 //set view engine to els 
 app.set('view engine', 'ejs');
-//use res,render to load up an ejs view file 
-// app.get('/homepage', function(req, res) {
-//     res.render('indexejs')
 
-// })
+//connect folder 
+app.use(express.static('public'))
+
+//use res,render to load up an ejs view file 
+
 app.get('/insertfront' , function(req, res) {
-    res.render('indexejs',  {userid : id, statusl : statuse , userlist : users}) //send value from front to back
+    res.render('indexejs') //send value from front to back ,  {userid : id, statusl : statuse , userlist : users}
 })
 
 
