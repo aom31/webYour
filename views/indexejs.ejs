@@ -84,6 +84,14 @@
         </section>
 
     </main>
-    
+    <p> <%= userid %></p>
+    <p> <%= statusl %></p>
+    <% userlist.forEach(function(users){ %>
+        <p>
+            <%= users.name %>
+            <%= users.lname %>
+            <%= users.birth_day %>
+        </p>
+    <% }) %>
 </body>
 </html>
